@@ -1,34 +1,43 @@
 <!DOCTYPE html>
+<!-- السمة lang و dir سيتم تغييرها بواسطة JavaScript -->
 <html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شركة المصاعد [اسم الشركة] - حلول مصاعد آمنة ومبتكرة</title>
+    <!-- سيتم تغيير العنوان بواسطة JavaScript -->
+    <title id="page-title">شركة المصاعد السعودية - حلول مصاعد آمنة ومبتكرة</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <header class="header">
         <div class="container navbar">
-            <a href="#" class="logo">شركه المصاعد السعوديه </a>
+            <a href="#" class="logo" id="logo">شركة المصاعد السعودية</a>
             <nav class="nav-menu">
                 <ul class="nav-links">
-                    <li><a href="#hero">الرئيسية</a></li>
-                    <li><a href="#services">خدماتنا</a></li>
-                    <li><a href="#products">منتجاتنا</a></li>
-                    <li><a href="#projects">مشاريعنا</a></li>
-                    <li><a href="#about">معلومات عنا</a></li>
-                    <li><a href="#contact">اتصل بنا</a></li>
+                    <li><a href="#hero" id="nav-home">الرئيسية</a></li>
+                    <li><a href="#services" id="nav-services">خدماتنا</a></li>
+                    <li><a href="#products" id="nav-products">منتجاتنا</a></li>
+                    <li><a href="#projects" id="nav-projects">مشاريعنا</a></li>
+                    <li><a href="#about" id="nav-about">معلومات عنا</a></li>
+                    <li><a href="#contact" id="nav-contact">اتصل بنا</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
-                <a href="#" class="search-icon" aria-label="بحث"><i class="fas fa-search"></i></a>
-                <a href="#contact" class="btn btn-outline">ابدأ الآن</a>
-            </div>
+                <!-- زر تبديل اللغة -->
+                <div class="lang-switcher">
+                    <img id="language-toggle" src="https://flagcdn.com/w40/sa.png" alt="تغيير اللغة" />
+                </div>
+                <!-- زر تبديل الوضع الليلي -->
+                <button class="theme-switcher" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+               </div>
             <button class="menu-toggle" aria-label="فتح القائمة">
                 <i class="fas fa-bars"></i>
             </button>
@@ -38,38 +47,43 @@
     <section class="hero" id="hero" style="background-image: url('download.png');">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <h1>حلول مصاعد متكاملة لبيئة آمنة ومريحة</h1>
-            <p>نقدم أحدث التقنيات في تركيب وصيانة وتحديث المصاعد لضمان تجربة لا مثيل لها.</p>
-            <a href="#services" class="btn btn-primary">اكتشف خدماتنا</a>
+            <h1 id="hero-title">حلول مصاعد متكاملة لبيئة آمنة ومريحة</h1>
+            <p id="hero-subtitle">نقدم أحدث التقنيات في تركيب وصيانة وتحديث المصاعد لضمان تجربة لا مثيل لها.</p>
+            <a href="#services" class="btn btn-primary" id="hero-cta-btn">اكتشف خدماتنا</a>
         </div>
     </section>
 
     <main class="main-content">
         <section class="services-section" id="services">
             <div class="container">
-                <h2>خدماتنا المتكاملة</h2>
-                <p class="section-description">نقدم مجموعة واسعة من الخدمات التي تلبي كافة احتياجات المباني والمؤسسات،
+                <h2 id="services-title">خدماتنا المتكاملة</h2>
+                <p class="section-description" id="services-desc">نقدم مجموعة واسعة من الخدمات التي تلبي كافة احتياجات
+                    المباني والمؤسسات،
                     بدءًا من التصميم وحتى الصيانة الدورية.</p>
                 <div class="features-grid">
                     <div class="feature-item">
                         <i class="fas fa-hard-hat"></i>
-                        <h3>تركيب المصاعد</h3>
-                        <p>تخطيط وتركيب مصاعد عالية الجودة لمختلف أنواع المباني بأحدث التقنيات ومعايير الأمان.</p>
+                        <h3 id="service-1-title">تركيب المصاعد</h3>
+                        <p id="service-1-desc">تخطيط وتركيب مصاعد عالية الجودة لمختلف أنواع المباني بأحدث التقنيات
+                            ومعايير الأمان.</p>
                     </div>
                     <div class="feature-item">
                         <i class="fas fa-tools"></i>
-                        <h3>صيانة المصاعد</h3>
-                        <p>خدمات صيانة وقائية وعلاجية لضمان الأداء الأمثل للمصاعد على مدار الساعة.</p>
+                        <h3 id="service-2-title">صيانة المصاعد</h3>
+                        <p id="service-2-desc">خدمات صيانة وقائية وعلاجية لضمان الأداء الأمثل للمصاعد على مدار الساعة.
+                        </p>
                     </div>
                     <div class="feature-item">
                         <i class="fas fa-sync-alt"></i>
-                        <h3>تحديث وتجديد</h3>
-                        <p>تحديث المصاعد القديمة بتقنيات حديثة لزيادة الكفاءة والأمان وتحسين المظهر.</p>
+                        <h3 id="service-3-title">تحديث وتجديد</h3>
+                        <p id="service-3-desc">تحديث المصاعد القديمة بتقنيات حديثة لزيادة الكفاءة والأمان وتحسين المظهر.
+                        </p>
                     </div>
                     <div class="feature-item">
                         <i class="fas fa-shield-alt"></i>
-                        <h3>استشارات الأمان</h3>
-                        <p>تقديم استشارات متخصصة حول معايير الأمان والسلامة للمصاعد والتوافق مع اللوائح.</p>
+                        <h3 id="service-4-title">استشارات الأمان</h3>
+                        <p id="service-4-desc">تقديم استشارات متخصصة حول معايير الأمان والسلامة للمصاعد والتوافق مع
+                            اللوائح.</p>
                     </div>
                 </div>
             </div>
@@ -78,35 +92,36 @@
         <section class="products-section" id="products">
             <div class="container main-grid">
                 <div class="products-intro">
-                    <h2>منتجاتنا المميزة</h2>
-                    <p>استكشف مجموعتنا الواسعة من المصاعد المصممة لتناسب كل الاحتياجات والتصاميم المعمارية.</p>
-                    <a href="#" class="btn btn-outline-dark">شاهد الكتالوج الكامل</a>
+                    <h2 id="products-title">منتجاتنا المميزة</h2>
+                    <p id="products-desc">استكشف مجموعتنا الواسعة من المصاعد المصممة لتناسب كل الاحتياجات والتصاميم
+                        المعمارية.</p>
+                    <a href="#" class="btn btn-outline-dark" id="products-cta-btn">شاهد الكتالوج الكامل</a>
                 </div>
                 <aside class="product-list">
                     <div class="product-item">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9oH-0jyw1MN66YGYVIdC7mEkhW4_QqmcDWQ&s"
                             alt="مصاعد تجارية">
-                        <p>مصاعد تجارية</p>
+                        <p id="product-1-name">مصاعد تجارية</p>
                     </div>
                     <div class="product-item">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_O_gOfWFXnkzPYf6b0B4a7rVzKuZPy5gwyg&s"
                             alt="مصاعد مستشفيات">
-                        <p>مصاعد مستشفيات</p>
+                        <p id="product-2-name">مصاعد مستشفيات</p>
                     </div>
                     <div class="product-item">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4KG0YOFNrk5UZkYkTklzpv3YBYyifv12cDw&s"
                             alt="مصاعد حديثة">
-                        <p>مصاعد حديثة</p>
+                        <p id="product-3-name">مصاعد حديثة</p>
                     </div>
                     <div class="product-item">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7gB1394XOlmsyp3xN3CXZEjqB4yieDM2_sw&s"
                             alt="مصاعد بانورامية زجاجية">
-                        <p>مصاعد بانورامية زجاجية</p>
+                        <p id="product-4-name">مصاعد بانورامية زجاجية</p>
                     </div>
                     <div class="product-item">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiZm--HmoY2ztYGc_MjycI_yo68s39yA8uTA&s"
                             alt="مصاعد منزلية">
-                        <p>مصاعد منزلية</p>
+                        <p id="product-5-name">مصاعد منزلية</p>
                     </div>
                 </aside>
             </div>
@@ -115,13 +130,15 @@
         <section class="about-us-section" id="about">
             <div class="container about-grid">
                 <div class="about-info">
-                    <h2>من نحن؟</h2>
-                    <p>شركة المصاعد السعوديه  هي الرائدة في مجال حلول المصاعد، بخبرة تمتد لأكثر من 6 سنوات. نلتزم بتقديم
+                    <h2 id="about-title">من نحن؟</h2>
+                    <p id="about-p1">شركة المصاعد السعودية هي الرائدة في مجال حلول المصاعد، بخبرة تمتد لأكثر من 6 سنوات.
+                        نلتزم بتقديم
                         أعلى مستويات الجودة والأمان في جميع مشاريعنا، من التركيب والصيانة إلى التحديث، لضمان رضا عملائنا
                         وسلامة مستخدمي مصاعدنا.</p>
-                    <p>فريق عملنا من المهندسين والفنيين المتخصصين على أهبة الاستعداد لتقديم الاستشارات والدعم الفني،
+                    <p id="about-p2">فريق عملنا من المهندسين والفنيين المتخصصين على أهبة الاستعداد لتقديم الاستشارات
+                        والدعم الفني،
                         وابتكار حلول مصممة خصيصًا لتلبية احتياجاتك.</p>
-                    <a href="#contact" class="btn btn-primary">تواصل معنا الآن</a>
+                    <a href="#contact" class="btn btn-primary" id="about-cta-btn">تواصل معنا الآن</a>
                 </div>
                 <div class="about-image">
                     <img src="pngtree-portrait-of-worker-team-in-a-uniform-foreman-in-hardhat-job-png-image_14573246.png"
@@ -133,16 +150,16 @@
         <section class="projects-section" id="projects">
             <div class="container projects-grid">
                 <div class="projects-intro">
-                    <h3>شريكك نحو القمة</h3>
-                    <p>اكتشف مجموعتنا الواسعة من المشاريع الناجحة التي تعكس خبرتنا والتزامنا بالجودة في مختلف القطاعات.
+                    <h3 id="projects-subtitle">شريكك نحو القمة</h3>
+                    <p id="projects-desc">اكتشف مجموعتنا الواسعة من المشاريع الناجحة التي تعكس خبرتنا والتزامنا بالجودة
+                        في مختلف القطاعات.
                     </p>
-                    <a href="#" class="btn btn-primary">شاهد مشاريعنا</a>
+                    <a href="#" class="btn btn-primary" id="projects-cta-btn">شاهد مشاريعنا</a>
                 </div>
                 <div class="projects-gallery">
-                    <img src="https://vision-ksa.com/wp-content/uploads/2024/05/467-1024x682.png.webp"
-                        alt="مشروع 1" class="gallery-item-wide">
-                    <img src="https://vision-ksa.com/wp-content/uploads/2024/05/467-1024x682.png.webp"
-                        alt="مشروع 2">
+                    <img src="https://vision-ksa.com/wp-content/uploads/2024/05/467-1024x682.png.webp" alt="مشروع 1"
+                        class="gallery-item-wide">
+                    <img src="https://vision-ksa.com/wp-content/uploads/2024/05/467-1024x682.png.webp" alt="مشروع 2">
                     <img src="https://vision-ksa.com/wp-content/uploads/2024/05/467-1024x682.png.webp" alt="مشروع 3"
                         class="gallery-item-wide">
                     <img src="https://vision-ksa.com/wp-content/uploads/2024/05/467-1024x682.png.webp" alt="مشروع 4"
@@ -153,19 +170,21 @@
 
         <section class="testimonials-section">
             <div class="container">
-                <h2>ماذا يقول عملاؤنا؟</h2>
+                <h2 id="testimonials-title">ماذا يقول عملاؤنا؟</h2>
                 <div class="testimonials-grid">
                     <div class="testimonial-item">
-                        <p>"خدمة ممتازة، تركيب سريع واحترافي. المصعد يعمل بكفاءة وأمان تام."</p>
-                        <cite> - أحمد محمد، مدير شركة عقارية</cite>
+                        <p id="testimonial-1-text">"خدمة ممتازة، تركيب سريع واحترافي. المصعد يعمل بكفاءة وأمان تام."</p>
+                        <cite id="testimonial-1-author"> - أحمد محمد، مدير شركة عقارية</cite>
                     </div>
                     <div class="testimonial-item">
-                        <p>"الصيانة الدورية من فريقهم تضمن راحة بال تامة. استجابتهم سريعة جدًا لأي طارئ."</p>
-                        <cite> - فاطمة علي، مالكة مبنى سكني</cite>
+                        <p id="testimonial-2-text">"الصيانة الدورية من فريقهم تضمن راحة بال تامة. استجابتهم سريعة جدًا
+                            لأي طارئ."</p>
+                        <cite id="testimonial-2-author"> - فاطمة علي، مالكة مبنى سكني</cite>
                     </div>
                     <div class="testimonial-item">
-                        <p>"لقد قاموا بتحديث مصاعد مبنانا بشكل مذهل، وأصبحت تبدو وكأنها جديدة تمامًا!"</p>
-                        <cite> - خالد محمود، مهندس معماري</cite>
+                        <p id="testimonial-3-text">"لقد قاموا بتحديث مصاعد مبنانا بشكل مذهل، وأصبحت تبدو وكأنها جديدة
+                            تمامًا!"</p>
+                        <cite id="testimonial-3-author"> - خالد محمود، مهندس معماري</cite>
                     </div>
                 </div>
             </div>
@@ -174,37 +193,38 @@
         <section class="blog-contact-section" id="contact">
             <div class="container blog-contact-grid">
                 <div class="blog-section">
-                    <h2>آخر أخبارنا ومدوناتنا</h2>
+                    <h2 id="blog-title">آخر أخبارنا ومدوناتنا</h2>
                     <div class="blog-post">
                         <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NjI2Mzd8MHwxfHNlYXJjaHw0fHxhcmNoaXRlY3R1cmUlMjBlbGV2YXRvcnxlbnwwfHx8fDE3MDY2OTM4Mjh8MA&ixlib=rb-4.0.3&q=80&w=150"
                             alt="التخطيط المعماري للمباني الحديثة">
                         <div class="blog-post-content">
-                            <h4>التخطيط المعماري للمباني الحديثة وتكامل المصاعد</h4>
-                            <p>اكتشف كيف يساهم التخطيط المعماري الذكي في دمج المصاعد بشكل فعال وجمالي في تصميم المباني
+                            <h4 id="blog-1-title">التخطيط المعماري للمباني الحديثة وتكامل المصاعد</h4>
+                            <p id="blog-1-desc">اكتشف كيف يساهم التخطيط المعماري الذكي في دمج المصاعد بشكل فعال وجمالي
+                                في تصميم المباني
                                 المعاصرة.</p>
-                           
                         </div>
                     </div>
                     <div class="blog-post">
                         <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NjI2Mzd8MHwxfHNlYXJjaHwxfHxzYWZldHklMjBlbGV2YXRvcnxlbnwwfHx8fDE3MDY2OTM4NzF8MA&ixlib=rb-4.0.3&q=80&w=150"
                             alt="صيانة المصاعد: نصائح هامة للسلامة">
                         <div class="blog-post-content">
-                            <h4>صيانة المصاعد: نصائح هامة لضمان سلامة الركاب</h4>
-                            <p>تعرف على أهمية الصيانة الدورية للمصاعد وكيف تضمن الحفاظ على سلامة الركاب وأداء المصعد
+                            <h4 id="blog-2-title">صيانة المصاعد: نصائح هامة لضمان سلامة الركاب</h4>
+                            <p id="blog-2-desc">تعرف على أهمية الصيانة الدورية للمصاعد وكيف تضمن الحفاظ على سلامة الركاب
+                                وأداء المصعد
                                 بكفاءة.</p>
-                           
                         </div>
                     </div>
                 </div>
 
                 <div class="contact-form-wrapper">
-                    <h2>تواصل معنا</h2>
+                    <h2 id="contact-form-title">تواصل معنا</h2>
                     <form class="contact-form">
-                        <input type="text" name="name" placeholder="الاسم الكريم" required>
-                        <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-                        <input type="tel" name="phone" placeholder="رقم الهاتف (اختياري)">
-                        <textarea name="message" placeholder="اكتب رسالتك هنا..." rows="5" required></textarea>
-                        <button type="submit" class="btn btn-primary-dark">إرسال الرسالة <i
+                        <input type="text" name="name" placeholder="الاسم الكريم" required id="form-name">
+                        <input type="email" name="email" placeholder="البريد الإلكتروني" required id="form-email">
+                        <input type="tel" name="phone" placeholder="رقم الهاتف (اختياري)" id="form-phone">
+                        <textarea name="message" placeholder="اكتب رسالتك هنا..." rows="5" required
+                            id="form-message"></textarea>
+                        <button type="submit" class="btn btn-primary-dark" id="form-submit-btn">إرسال الرسالة <i
                                 class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
@@ -215,8 +235,8 @@
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-col">
-                <h3>الشركه المصاعد السعوديه</h3>
-                <p>الرائدة في حلول المصاعد المتكاملة. نلتزم بالجودة والأمان والابتكار لخدمتكم.</p>
+                <h3 id="footer-logo">الشركة المصاعد السعودية</h3>
+                <p id="footer-desc">الرائدة في حلول المصاعد المتكاملة. نلتزم بالجودة والأمان والابتكار لخدمتكم.</p>
                 <div class="social-links">
                     <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
@@ -225,47 +245,298 @@
                 </div>
             </div>
             <div class="footer-col">
-                <h3>روابط سريعة</h3>
+                <h3 id="footer-links-title">روابط سريعة</h3>
                 <ul>
-                    <li><a href="#hero">الرئيسية</a></li>
-                    <li><a href="#services">خدماتنا</a></li>
-                    <li><a href="#products">منتجاتنا</a></li>
-                    <li><a href="#projects">مشاريعنا</a></li>
+                    <li><a href="#hero" id="footer-nav-home">الرئيسية</a></li>
+                    <li><a href="#services" id="footer-nav-services">خدماتنا</a></li>
+                    <li><a href="#products" id="footer-nav-products">منتجاتنا</a></li>
+                    <li><a href="#projects" id="footer-nav-projects">مشاريعنا</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h3>اتصل بنا</h3>
-                <p><i class="fas fa-map-marker-alt"></i>العنوان</p>
+                <h3 id="footer-contact-title">اتصل بنا</h3>
+                <p id="footer-address"><i class="fas fa-map-marker-alt"></i>العنوان</p>
                 <p><i class="fas fa-phone-alt"></i> 96650000000</p>
                 <p><i class="fas fa-envelope"></i> info@company.com</p>
-                <p><i class="fas fa-clock"></i> السبت - الخميس: 9:00 ص - 6:00 م</p>
+                <p id="footer-hours"><i class="fas fa-clock"></i> السبت - الخميس: 9:00 ص - 6:00 م</p>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; <span id="current-year"></span> جميع الحقوق محفوظة لشركة</p>
+                <p id="footer-copyright">&copy; <span id="current-year"></span> جميع الحقوق محفوظة لشركة</p>
             </div>
         </div>
     </footer>
 
+    <!-- ======================= -->
+    <!--        SCRIPTS          -->
+    <!-- ======================= -->
     <script>
+        // --- Mobile Menu Toggle ---
         document.getElementById('current-year').textContent = new Date().getFullYear();
-
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
-
         menuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             menuToggle.querySelector('i').classList.toggle('fa-bars');
             menuToggle.querySelector('i').classList.toggle('fa-times');
         });
-
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                menuToggle.querySelector('i').classList.remove('fa-times');
-                menuToggle.querySelector('i').classList.add('fa-bars');
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    menuToggle.querySelector('i').classList.remove('fa-times');
+                    menuToggle.querySelector('i').classList.add('fa-bars');
+                }
             });
+        });
+
+        // --- Language Switcher Logic ---
+        const languageToggleButton = document.getElementById('language-toggle');
+        const saudiFlagURL = "https://flagcdn.com/w40/sa.png";
+        const usFlagURL = "https://flagcdn.com/w40/us.png";
+
+        const translations = {
+            ar: {
+                pageTitle: "شركة المصاعد السعودية - حلول مصاعد آمنة ومبتكرة",
+                logo: "شركة المصاعد السعودية",
+                navHome: "الرئيسية",
+                navServices: "خدماتنا",
+                navProducts: "منتجاتنا",
+                navProjects: "مشاريعنا",
+                navAbout: "معلومات عنا",
+                navContact: "اتصل بنا",
+                headerStartBtn: "ابدأ الآن",
+                heroTitle: "حلول مصاعد متكاملة لبيئة آمنة ومريحة",
+                heroSubtitle: "نقدم أحدث التقنيات في تركيب وصيانة وتحديث المصاعد لضمان تجربة لا مثيل لها.",
+                heroCtaBtn: "اكتشف خدماتنا",
+                servicesTitle: "خدماتنا المتكاملة",
+                servicesDesc: "نقدم مجموعة واسعة من الخدمات التي تلبي كافة احتياجات المباني والمؤسسات، بدءًا من التصميم وحتى الصيانة الدورية.",
+                service1Title: "تركيب المصاعد",
+                service1Desc: "تخطيط وتركيب مصاعد عالية الجودة لمختلف أنواع المباني بأحدث التقنيات ومعايير الأمان.",
+                service2Title: "صيانة المصاعد",
+                service2Desc: "خدمات صيانة وقائية وعلاجية لضمان الأداء الأمثل للمصاعد على مدار الساعة.",
+                service3Title: "تحديث وتجديد",
+                service3Desc: "تحديث المصاعد القديمة بتقنيات حديثة لزيادة الكفاءة والأمان وتحسين المظهر.",
+                service4Title: "استشارات الأمان",
+                service4Desc: "تقديم استشارات متخصصة حول معايير الأمان والسلامة للمصاعد والتوافق مع اللوائح.",
+                productsTitle: "منتجاتنا المميزة",
+                productsDesc: "استكشف مجموعتنا الواسعة من المصاعد المصممة لتناسب كل الاحتياجات والتصاميم المعمارية.",
+                productsCtaBtn: "شاهد الكتالوج الكامل",
+                product1Name: "مصاعد تجارية",
+                product2Name: "مصاعد مستشفيات",
+                product3Name: "مصاعد حديثة",
+                product4Name: "مصاعد بانورامية زجاجية",
+                product5Name: "مصاعد منزلية",
+                aboutTitle: "من نحن؟",
+                aboutP1: "شركة المصاعد السعودية هي الرائدة في مجال حلول المصاعد، بخبرة تمتد لأكثر من 6 سنوات. نلتزم بتقديم أعلى مستويات الجودة والأمان في جميع مشاريعنا، من التركيب والصيانة إلى التحديث، لضمان رضا عملائنا وسلامة مستخدمي مصاعدنا.",
+                aboutP2: "فريق عملنا من المهندسين والفنيين المتخصصين على أهبة الاستعداد لتقديم الاستشارات والدعم الفني، وابتكار حلول مصممة خصيصًا لتلبية احتياجاتك.",
+                aboutCtaBtn: "تواصل معنا الآن",
+                projectsSubtitle: "شريكك نحو القمة",
+                projectsDesc: "اكتشف مجموعتنا الواسعة من المشاريع الناجحة التي تعكس خبرتنا والتزامنا بالجودة في مختلف القطاعات.",
+                projectsCtaBtn: "شاهد مشاريعنا",
+                testimonialsTitle: "ماذا يقول عملاؤنا؟",
+                testimonial1Text: "\"خدمة ممتازة، تركيب سريع واحترافي. المصعد يعمل بكفاءة وأمان تام.\"",
+                testimonial1Author: "- أحمد محمد، مدير شركة عقارية",
+                testimonial2Text: "\"الصيانة الدورية من فريقهم تضمن راحة بال تامة. استجابتهم سريعة جدًا لأي طارئ.\"",
+                testimonial2Author: "- فاطمة علي، مالكة مبنى سكني",
+                testimonial3Text: "\"لقد قاموا بتحديث مصاعد مبنانا بشكل مذهل، وأصبحت تبدو وكأنها جديدة تمامًا!\"",
+                testimonial3Author: "- خالد محمود، مهندس معماري",
+                blogTitle: "آخر أخبارنا ومدوناتنا",
+                blog1Title: "التخطيط المعماري للمباني الحديثة وتكامل المصاعد",
+                blog1Desc: "اكتشف كيف يساهم التخطيط المعماري الذكي في دمج المصاعد بشكل فعال وجمالي في تصميم المباني المعاصرة.",
+                blog2Title: "صيانة المصاعد: نصائح هامة لضمان سلامة الركاب",
+                blog2Desc: "تعرف على أهمية الصيانة الدورية للمصاعد وكيف تضمن الحفاظ على سلامة الركاب وأداء المصعد بكفاءة.",
+                contactFormTitle: "تواصل معنا",
+                formNamePlaceholder: "الاسم الكريم",
+                formEmailPlaceholder: "البريد الإلكتروني",
+                formPhonePlaceholder: "رقم الهاتف (اختياري)",
+                formMessagePlaceholder: "اكتب رسالتك هنا...",
+                formSubmitBtn: "إرسال الرسالة",
+                footerLogo: "الشركة المصاعد السعودية",
+                footerDesc: "الرائدة في حلول المصاعد المتكاملة. نلتزم بالجودة والأمان والابتكار لخدمتكم.",
+                footerLinksTitle: "روابط سريعة",
+                footerContactTitle: "اتصل بنا",
+                footerAddress: "العنوان",
+                footerHours: "السبت - الخميس: 9:00 ص - 6:00 م",
+                footerCopyright: `&copy; ${new Date().getFullYear()} جميع الحقوق محفوظة لشركة`
+            },
+            en: {
+                pageTitle: "Saudi Elevators Co. - Safe and Innovative Elevator Solutions",
+                logo: "Saudi Elevators Co.",
+                navHome: "Home",
+                navServices: "Services",
+                navProducts: "Products",
+                navProjects: "Projects",
+                navAbout: "About Us",
+                navContact: "Contact Us",
+                headerStartBtn: "Get Started",
+                heroTitle: "Integrated Elevator Solutions for a Safe and Comfortable Environment",
+                heroSubtitle: "We provide the latest technologies in elevator installation, maintenance, and modernization for an unparalleled experience.",
+                heroCtaBtn: "Discover Our Services",
+                servicesTitle: "Our Integrated Services",
+                servicesDesc: "We offer a wide range of services that meet all the needs of buildings and institutions, from design to periodic maintenance.",
+                service1Title: "Elevator Installation",
+                service1Desc: "Planning and installing high-quality elevators for various types of buildings with the latest technology and safety standards.",
+                service2Title: "Elevator Maintenance",
+                service2Desc: "Preventive and corrective maintenance services to ensure optimal performance of elevators around the clock.",
+                service3Title: "Modernization & Renovation",
+                service3Desc: "Upgrading old elevators with modern technologies to increase efficiency, safety, and improve appearance.",
+                service4Title: "Safety Consulting",
+                service4Desc: "Providing specialized consultations on elevator safety standards and compliance with regulations.",
+                productsTitle: "Our Featured Products",
+                productsDesc: "Explore our wide range of elevators designed to suit all needs and architectural designs.",
+                productsCtaBtn: "View Full Catalog",
+                product1Name: "Commercial Elevators",
+                product2Name: "Hospital Elevators",
+                product3Name: "Modern Elevators",
+                product4Name: "Panoramic Glass Elevators",
+                product5Name: "Home Elevators",
+                aboutTitle: "Who Are We?",
+                aboutP1: "Saudi Elevators Co. is a leader in elevator solutions with over 6 years of experience. We are committed to providing the highest levels of quality and safety in all our projects, from installation and maintenance to modernization, to ensure customer satisfaction and the safety of our elevator users.",
+                aboutP2: "Our team of specialized engineers and technicians is ready to provide consultations, technical support, and create custom-designed solutions to meet your needs.",
+                aboutCtaBtn: "Contact Us Now",
+                projectsSubtitle: "Your Partner to the Top",
+                projectsDesc: "Discover our wide range of successful projects that reflect our expertise and commitment to quality in various sectors.",
+                projectsCtaBtn: "View Our Projects",
+                testimonialsTitle: "What Our Clients Say",
+                testimonial1Text: "\"Excellent service, fast and professional installation. The elevator operates efficiently and safely.\"",
+                testimonial1Author: "- Ahmed Mohamed, Real Estate Company Manager",
+                testimonial2Text: "\"Their periodic maintenance ensures complete peace of mind. Their response to any emergency is very fast.\"",
+                testimonial2Author: "- Fatima Ali, Residential Building Owner",
+                testimonial3Text: "\"They modernized our building's elevators amazingly, and they look brand new!\"",
+                testimonial3Author: "- Khalid Mahmoud, Architect",
+                blogTitle: "Our Latest News & Blogs",
+                blog1Title: "Architectural Planning for Modern Buildings and Elevator Integration",
+                blog1Desc: "Discover how smart architectural planning contributes to integrating elevators effectively and aesthetically into contemporary building designs.",
+                blog2Title: "Elevator Maintenance: Important Tips for Passenger Safety",
+                blog2Desc: "Learn about the importance of regular elevator maintenance and how it ensures passenger safety and efficient elevator performance.",
+                contactFormTitle: "Contact Us",
+                formNamePlaceholder: "Full Name",
+                formEmailPlaceholder: "Email Address",
+                formPhonePlaceholder: "Phone Number (Optional)",
+                formMessagePlaceholder: "Write your message here...",
+                formSubmitBtn: "Send Message",
+                footerLogo: "Saudi Elevators Co.",
+                footerDesc: "The leader in integrated elevator solutions. We are committed to quality, safety, and innovation to serve you.",
+                footerLinksTitle: "Quick Links",
+                footerContactTitle: "Contact Us",
+                footerAddress: "Address",
+                footerHours: "Saturday - Thursday: 9:00 AM - 6:00 PM",
+                footerCopyright: `&copy; ${new Date().getFullYear()} All rights reserved to`
+            }
+        };
+
+        const setLanguage = (lang) => {
+            const t = translations[lang];
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            document.getElementById('page-title').innerText = t.pageTitle;
+            document.getElementById('logo').innerText = t.logo;
+            document.getElementById('nav-home').innerText = t.navHome;
+            document.getElementById('nav-services').innerText = t.navServices;
+            document.getElementById('nav-products').innerText = t.navProducts;
+            document.getElementById('nav-projects').innerText = t.navProjects;
+            document.getElementById('nav-about').innerText = t.navAbout;
+            document.getElementById('nav-contact').innerText = t.navContact;
+            document.getElementById('header-start-btn').innerText = t.headerStartBtn;
+            document.getElementById('hero-title').innerText = t.heroTitle;
+            document.getElementById('hero-subtitle').innerText = t.heroSubtitle;
+            document.getElementById('hero-cta-btn').innerText = t.heroCtaBtn;
+            document.getElementById('services-title').innerText = t.servicesTitle;
+            document.getElementById('services-desc').innerText = t.servicesDesc;
+            document.getElementById('service-1-title').innerText = t.service1Title;
+            document.getElementById('service-1-desc').innerText = t.service1Desc;
+            document.getElementById('service-2-title').innerText = t.service2Title;
+            document.getElementById('service-2-desc').innerText = t.service2Desc;
+            document.getElementById('service-3-title').innerText = t.service3Title;
+            document.getElementById('service-3-desc').innerText = t.service3Desc;
+            document.getElementById('service-4-title').innerText = t.service4Title;
+            document.getElementById('service-4-desc').innerText = t.service4Desc;
+            document.getElementById('products-title').innerText = t.productsTitle;
+            document.getElementById('products-desc').innerText = t.productsDesc;
+            document.getElementById('products-cta-btn').innerText = t.productsCtaBtn;
+            document.getElementById('product-1-name').innerText = t.product1Name;
+            document.getElementById('product-2-name').innerText = t.product2Name;
+            document.getElementById('product-3-name').innerText = t.product3Name;
+            document.getElementById('product-4-name').innerText = t.product4Name;
+            document.getElementById('product-5-name').innerText = t.product5Name;
+            document.getElementById('about-title').innerText = t.aboutTitle;
+            document.getElementById('about-p1').innerText = t.aboutP1;
+            document.getElementById('about-p2').innerText = t.aboutP2;
+            document.getElementById('about-cta-btn').innerText = t.aboutCtaBtn;
+            document.getElementById('projects-subtitle').innerText = t.projectsSubtitle;
+            document.getElementById('projects-desc').innerText = t.projectsDesc;
+            document.getElementById('projects-cta-btn').innerText = t.projectsCtaBtn;
+            document.getElementById('testimonials-title').innerText = t.testimonialsTitle;
+            document.getElementById('testimonial-1-text').innerText = t.testimonial1Text;
+            document.getElementById('testimonial-1-author').innerText = t.testimonial1Author;
+            document.getElementById('testimonial-2-text').innerText = t.testimonial2Text;
+            document.getElementById('testimonial-2-author').innerText = t.testimonial2Author;
+            document.getElementById('testimonial-3-text').innerText = t.testimonial3Text;
+            document.getElementById('testimonial-3-author').innerText = t.testimonial3Author;
+            document.getElementById('blog-title').innerText = t.blogTitle;
+            document.getElementById('blog-1-title').innerText = t.blog1Title;
+            document.getElementById('blog-1-desc').innerText = t.blog1Desc;
+            document.getElementById('blog-2-title').innerText = t.blog2Title;
+            document.getElementById('blog-2-desc').innerText = t.blog2Desc;
+            document.getElementById('contact-form-title').innerText = t.contactFormTitle;
+            document.getElementById('form-name').placeholder = t.formNamePlaceholder;
+            document.getElementById('form-email').placeholder = t.formEmailPlaceholder;
+            document.getElementById('form-phone').placeholder = t.formPhonePlaceholder;
+            document.getElementById('form-message').placeholder = t.formMessagePlaceholder;
+            document.getElementById('form-submit-btn').innerHTML = `${t.formSubmitBtn} <i class="fas fa-paper-plane"></i>`;
+            document.getElementById('footer-logo').innerText = t.footerLogo;
+            document.getElementById('footer-desc').innerText = t.footerDesc;
+            document.getElementById('footer-links-title').innerText = t.footerLinksTitle;
+            document.getElementById('footer-nav-home').innerText = t.navHome;
+            document.getElementById('footer-nav-services').innerText = t.navServices;
+            document.getElementById('footer-nav-products').innerText = t.navProducts;
+            document.getElementById('footer-nav-projects').innerText = t.navProjects;
+            document.getElementById('footer-contact-title').innerText = t.footerContactTitle;
+            document.getElementById('footer-address').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${t.footerAddress}`;
+            document.getElementById('footer-hours').innerHTML = `<i class="fas fa-clock"></i> ${t.footerHours}`;
+            document.getElementById('footer-copyright').innerHTML = `${t.footerCopyright} ${t.logo}`;
+
+            if (lang === 'ar') {
+                languageToggleButton.src = saudiFlagURL;
+                languageToggleButton.alt = "Switch to English";
+            } else {
+                languageToggleButton.src = usFlagURL;
+                languageToggleButton.alt = "التحويل إلى العربية";
+            }
+        };
+
+        languageToggleButton.addEventListener('click', () => {
+            const currentLang = document.documentElement.lang;
+            const newLang = currentLang === 'ar' ? 'en' : 'ar';
+            setLanguage(newLang);
+        });
+
+        // --- Theme (Dark/Light Mode) Switcher ---
+        const themeToggleButton = document.getElementById('theme-toggle');
+        const themeIcon = themeToggleButton.querySelector('i');
+        const currentTheme = localStorage.getItem('theme');
+
+        // Apply the saved theme on page load
+        if (currentTheme === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+
+        themeToggleButton.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            let theme = 'light';
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                theme = 'dark';
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+            localStorage.setItem('theme', theme);
         });
     </script>
 
