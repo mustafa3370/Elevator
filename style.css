@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-   
+
 }
 
 :root {
@@ -220,7 +220,7 @@ html[dir="ltr"] .nav-links li {
     bottom: -5px;
     width: 0;
     height: 3px;
-    
+
     transition: width 0.3s ease;
 }
 
@@ -854,6 +854,10 @@ html[dir="ltr"] .social-links {
 /* --- Responsive Design (Media Queries) --- */
 
 @media (max-width: 992px) {
+    body {
+        overflow-x: hidden;
+    }
+
     .navbar {
         flex-wrap: wrap;
         justify-content: space-between;
