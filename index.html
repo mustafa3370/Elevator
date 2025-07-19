@@ -37,7 +37,7 @@
                 <button class="theme-switcher" id="theme-toggle" aria-label="Toggle Dark Mode">
                     <i class="fas fa-moon"></i>
                 </button>
-               </div>
+            </div>
             <button class="menu-toggle" aria-label="فتح القائمة">
                 <i class="fas fa-bars"></i>
             </button>
@@ -306,7 +306,6 @@
                 navProjects: "مشاريعنا",
                 navAbout: "معلومات عنا",
                 navContact: "اتصل بنا",
-                headerStartBtn: "ابدأ الآن",
                 heroTitle: "حلول مصاعد متكاملة لبيئة آمنة ومريحة",
                 heroSubtitle: "نقدم أحدث التقنيات في تركيب وصيانة وتحديث المصاعد لضمان تجربة لا مثيل لها.",
                 heroCtaBtn: "اكتشف خدماتنا",
@@ -370,7 +369,6 @@
                 navProjects: "Projects",
                 navAbout: "About Us",
                 navContact: "Contact Us",
-                headerStartBtn: "Get Started",
                 heroTitle: "Integrated Elevator Solutions for a Safe and Comfortable Environment",
                 heroSubtitle: "We provide the latest technologies in elevator installation, maintenance, and modernization for an unparalleled experience.",
                 heroCtaBtn: "Discover Our Services",
@@ -427,76 +425,102 @@
             }
         };
 
+        // Helper function to safely update text content of an element
+        const updateText = (id, text) => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.innerText = text;
+            }
+        };
+
+        // Helper function to safely update inner HTML of an element
+        const updateHTML = (id, html) => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.innerHTML = html;
+            }
+        };
+
+        // Helper function to safely update placeholder text of an input/textarea
+        const updatePlaceholder = (id, text) => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.placeholder = text;
+            }
+        };
+
+
         const setLanguage = (lang) => {
             const t = translations[lang];
             document.documentElement.lang = lang;
             document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-            document.getElementById('page-title').innerText = t.pageTitle;
-            document.getElementById('logo').innerText = t.logo;
-            document.getElementById('nav-home').innerText = t.navHome;
-            document.getElementById('nav-services').innerText = t.navServices;
-            document.getElementById('nav-products').innerText = t.navProducts;
-            document.getElementById('nav-projects').innerText = t.navProjects;
-            document.getElementById('nav-about').innerText = t.navAbout;
-            document.getElementById('nav-contact').innerText = t.navContact;
-            document.getElementById('header-start-btn').innerText = t.headerStartBtn;
-            document.getElementById('hero-title').innerText = t.heroTitle;
-            document.getElementById('hero-subtitle').innerText = t.heroSubtitle;
-            document.getElementById('hero-cta-btn').innerText = t.heroCtaBtn;
-            document.getElementById('services-title').innerText = t.servicesTitle;
-            document.getElementById('services-desc').innerText = t.servicesDesc;
-            document.getElementById('service-1-title').innerText = t.service1Title;
-            document.getElementById('service-1-desc').innerText = t.service1Desc;
-            document.getElementById('service-2-title').innerText = t.service2Title;
-            document.getElementById('service-2-desc').innerText = t.service2Desc;
-            document.getElementById('service-3-title').innerText = t.service3Title;
-            document.getElementById('service-3-desc').innerText = t.service3Desc;
-            document.getElementById('service-4-title').innerText = t.service4Title;
-            document.getElementById('service-4-desc').innerText = t.service4Desc;
-            document.getElementById('products-title').innerText = t.productsTitle;
-            document.getElementById('products-desc').innerText = t.productsDesc;
-            document.getElementById('products-cta-btn').innerText = t.productsCtaBtn;
-            document.getElementById('product-1-name').innerText = t.product1Name;
-            document.getElementById('product-2-name').innerText = t.product2Name;
-            document.getElementById('product-3-name').innerText = t.product3Name;
-            document.getElementById('product-4-name').innerText = t.product4Name;
-            document.getElementById('product-5-name').innerText = t.product5Name;
-            document.getElementById('about-title').innerText = t.aboutTitle;
-            document.getElementById('about-p1').innerText = t.aboutP1;
-            document.getElementById('about-p2').innerText = t.aboutP2;
-            document.getElementById('about-cta-btn').innerText = t.aboutCtaBtn;
-            document.getElementById('projects-subtitle').innerText = t.projectsSubtitle;
-            document.getElementById('projects-desc').innerText = t.projectsDesc;
-            document.getElementById('projects-cta-btn').innerText = t.projectsCtaBtn;
-            document.getElementById('testimonials-title').innerText = t.testimonialsTitle;
-            document.getElementById('testimonial-1-text').innerText = t.testimonial1Text;
-            document.getElementById('testimonial-1-author').innerText = t.testimonial1Author;
-            document.getElementById('testimonial-2-text').innerText = t.testimonial2Text;
-            document.getElementById('testimonial-2-author').innerText = t.testimonial2Author;
-            document.getElementById('testimonial-3-text').innerText = t.testimonial3Text;
-            document.getElementById('testimonial-3-author').innerText = t.testimonial3Author;
-            document.getElementById('blog-title').innerText = t.blogTitle;
-            document.getElementById('blog-1-title').innerText = t.blog1Title;
-            document.getElementById('blog-1-desc').innerText = t.blog1Desc;
-            document.getElementById('blog-2-title').innerText = t.blog2Title;
-            document.getElementById('blog-2-desc').innerText = t.blog2Desc;
-            document.getElementById('contact-form-title').innerText = t.contactFormTitle;
-            document.getElementById('form-name').placeholder = t.formNamePlaceholder;
-            document.getElementById('form-email').placeholder = t.formEmailPlaceholder;
-            document.getElementById('form-phone').placeholder = t.formPhonePlaceholder;
-            document.getElementById('form-message').placeholder = t.formMessagePlaceholder;
-            document.getElementById('form-submit-btn').innerHTML = `${t.formSubmitBtn} <i class="fas fa-paper-plane"></i>`;
-            document.getElementById('footer-logo').innerText = t.footerLogo;
-            document.getElementById('footer-desc').innerText = t.footerDesc;
-            document.getElementById('footer-links-title').innerText = t.footerLinksTitle;
-            document.getElementById('footer-nav-home').innerText = t.navHome;
-            document.getElementById('footer-nav-services').innerText = t.navServices;
-            document.getElementById('footer-nav-products').innerText = t.navProducts;
-            document.getElementById('footer-nav-projects').innerText = t.navProjects;
-            document.getElementById('footer-contact-title').innerText = t.footerContactTitle;
-            document.getElementById('footer-address').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${t.footerAddress}`;
-            document.getElementById('footer-hours').innerHTML = `<i class="fas fa-clock"></i> ${t.footerHours}`;
-            document.getElementById('footer-copyright').innerHTML = `${t.footerCopyright} ${t.logo}`;
+
+            // Using the helper functions for safer updates
+            updateText('page-title', t.pageTitle);
+            updateText('logo', t.logo);
+            updateText('nav-home', t.navHome);
+            updateText('nav-services', t.navServices);
+            updateText('nav-products', t.navProducts);
+            updateText('nav-projects', t.navProjects);
+            updateText('nav-about', t.navAbout);
+            updateText('nav-contact', t.navContact);
+            updateText('hero-title', t.heroTitle);
+            updateText('hero-subtitle', t.heroSubtitle);
+            updateText('hero-cta-btn', t.heroCtaBtn);
+            updateText('services-title', t.servicesTitle);
+            updateText('services-desc', t.servicesDesc);
+            updateText('service-1-title', t.service1Title);
+            updateText('service-1-desc', t.service1Desc);
+            updateText('service-2-title', t.service2Title);
+            updateText('service-2-desc', t.service2Desc);
+            updateText('service-3-title', t.service3Title);
+            updateText('service-3-desc', t.service3Desc);
+            updateText('service-4-title', t.service4Title);
+            updateText('service-4-desc', t.service4Desc);
+            updateText('products-title', t.productsTitle);
+            updateText('products-desc', t.productsDesc);
+            updateText('products-cta-btn', t.productsCtaBtn);
+            updateText('product-1-name', t.product1Name);
+            updateText('product-2-name', t.product2Name);
+            updateText('product-3-name', t.product3Name);
+            updateText('product-4-name', t.product4Name);
+            updateText('product-5-name', t.product5Name);
+            updateText('about-title', t.aboutTitle);
+            updateText('about-p1', t.aboutP1);
+            updateText('about-p2', t.aboutP2);
+            updateText('about-cta-btn', t.aboutCtaBtn);
+            updateText('projects-subtitle', t.projectsSubtitle);
+            updateText('projects-desc', t.projectsDesc);
+            updateText('projects-cta-btn', t.projectsCtaBtn);
+            updateText('testimonials-title', t.testimonialsTitle);
+            updateText('testimonial-1-text', t.testimonial1Text);
+            updateText('testimonial-1-author', t.testimonial1Author);
+            updateText('testimonial-2-text', t.testimonial2Text);
+            updateText('testimonial-2-author', t.testimonial2Author);
+            updateText('testimonial-3-text', t.testimonial3Text);
+            updateText('testimonial-3-author', t.testimonial3Author);
+            updateText('blog-title', t.blogTitle);
+            updateText('blog-1-title', t.blog1Title);
+            updateText('blog-1-desc', t.blog1Desc);
+            updateText('blog-2-title', t.blog2Title);
+            updateText('blog-2-desc', t.blog2Desc);
+            updateText('contact-form-title', t.contactFormTitle);
+            updatePlaceholder('form-name', t.formNamePlaceholder);
+            updatePlaceholder('form-email', t.formEmailPlaceholder);
+            updatePlaceholder('form-phone', t.formPhonePlaceholder);
+            updatePlaceholder('form-message', t.formMessagePlaceholder);
+            updateHTML('form-submit-btn', `${t.formSubmitBtn} <i class="fas fa-paper-plane"></i>`);
+            updateText('footer-logo', t.footerLogo);
+            updateText('footer-desc', t.footerDesc);
+            updateText('footer-links-title', t.footerLinksTitle);
+            updateText('footer-nav-home', t.navHome);
+            updateText('footer-nav-services', t.navServices);
+            updateText('footer-nav-products', t.navProducts);
+            updateText('footer-nav-projects', t.navProjects);
+            updateText('footer-contact-title', t.footerContactTitle);
+            updateHTML('footer-address', `<i class="fas fa-map-marker-alt"></i> ${t.footerAddress}`);
+            updateHTML('footer-hours', `<i class="fas fa-clock"></i> ${t.footerHours}`);
+            updateHTML('footer-copyright', `${t.footerCopyright} ${t.logo}`);
 
             if (lang === 'ar') {
                 languageToggleButton.src = saudiFlagURL;
